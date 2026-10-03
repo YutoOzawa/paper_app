@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/YutoOzawa/paper_app.git",
+  "stopRemainingPercent": 5,
+  "startRemainingPercent": 10,
+  "pollMilliseconds": 10000,
+  "maxCycles": 6,
+  "maxRunMinutes": 120,
+  "maxTurnMinutes": 20,
+  "maxToolCallsPerTurn": 100,
+  "maxRepeatedFindings": 2,
+  "cleanPassesRequired": 2,
+  "additionalSpendingAllowed": false,
+  "automaticResetRedemption": false,
+  "automaticPush": false,
+  "automaticDeployment": false,
+  "googleDriveEnabled": false,
+  "profile": "app-v1"
+}

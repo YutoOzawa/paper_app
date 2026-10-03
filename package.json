@@ -1,0 +1,15 @@
+{
+  "name": "paper-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test": "node --test tests/harness/*.test.mjs",
+    "doctor": "node harness/cli.mjs doctor",
+    "auto": "node harness/cli.mjs run",
+    "resume": "node harness/cli.mjs resume",
+    "status": "node harness/cli.mjs status",
+    "stop": "node harness/cli.mjs stop"
+  }
+}

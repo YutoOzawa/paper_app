@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "verdict": { "type": "string", "enum": ["pass", "changes_required"] },
+    "summary": { "type": "string" },
+    "findings": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "severity": {"type":"string","enum":["P0","P1","P2","P3"]}, "requirement":{"type":"string"}, "file":{"type":"string"}, "issue":{"type":"string"}, "fix":{"type":"string"} },
+      "required": ["severity","requirement","file","issue","fix"]
+    } },
+    "unmetRequirements": { "type":"array", "items":{"type":"string"} },
+    "evidence": { "type":"array", "items":{"type":"string"} },
+    "readability": { "type":"object", "additionalProperties":false,
+      "properties": {"clearJapanese":{"type":"boolean"},"causalExplanation":{"type":"boolean"},"englishMetadata":{"type":"boolean"},"navigable":{"type":"boolean"},"notMisleading":{"type":"boolean"}},
+      "required":["clearJapanese","causalExplanation","englishMetadata","navigable","notMisleading"]
+    }
+  },
+  "required":["verdict","summary","findings","unmetRequirements","evidence","readability"]
+}
